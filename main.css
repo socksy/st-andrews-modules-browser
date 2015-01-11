@@ -1,0 +1,52 @@
+@import url(http://fonts.googleapis.com/css?family=Neuton:200);
+.module_viewer {
+  cursor: default;
+  font-family: "Neuton", sans-serif;
+  display: inline-block; }
+  .module_viewer .header {
+    border-bottom: solid #c0c0c0 1px; }
+  .module_viewer h1 {
+    font-size: 20px; }
+  .module_viewer .code {
+    cursor: text;
+    display: inline-block;
+    overflow: hidden;
+    background: none;
+    border: none;
+    font-size: 20px;
+    margin-top: 15px;
+    outline: none;
+    text-underline-mode: solid; }
+  .module_viewer .lhs {
+    display: inline-block;
+    width: 150px;
+    padding: 20px;
+    vertical-align: top; }
+  .module_viewer .data {
+    margin-top: 20px;
+    display: table;
+    width: 100%; }
+    .module_viewer .data .label {
+      font-size: 16px;
+      display: table-cell;
+      text-align: left; }
+    .module_viewer .data .value {
+      text-align: right;
+      font-size: 20px;
+      display: table-cell; }
+  .module_viewer .data-squash {
+    text-align: right;
+    margin-left: 20px; }
+  .module_viewer .lecturers {
+    width: 300px;
+    display: inline-block; }
+  .module_viewer .rhs {
+    padding: 20px;
+    display: inline-block;
+    width: 600px; }
+    .module_viewer .rhs .description {
+      font-size: 20px; }
+  .module_viewer .low_emphasis {
+    color: #979797; }
+
+/*# sourceMappingURL=main.css.map */
