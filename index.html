@@ -5,74 +5,79 @@
     <title>Module Browser</title>
 </head>
 <body>
-    <div class="module_viewer">
-        <div class="header">
-            <div class="lhs" id="search_area">
-                <input id="code" class="code" placeholder="Code"/>
-                <!--<h1 id="code_completion" class="code low_emphasis"></h1>-->
-            </div>
-            <div class="rhs">
-                <h1 id="title" class="title">Enter a module code to start.</h1>
-            </div>
-        </div>
-        <div>
-            <div class="lhs">
-                <div class="data">
-                    <div class="label low_emphasis">Credits Available</div>
-                    <div id="credits" class="value">20</div>
-                </div>
-                <div class="data">
-                    <div class="label low_emphasis">Year</div>
-                    <div id="year" class="value">2014/5</div>
-                </div>
-                <div class="data">
-                    <div class="label low_emphasis">Semester</div>
-                    <div id="semester" class="value">1</div>
-                </div>
-                <div class="data">
-                    <div class="label">Contact Hours</div>
-                </div>
-                <div class="data-squash">
-                    <div class="data">
-                        <div class="label low_emphasis">Scheduled</div>
-                        <div id="scheduled" class="value">-</div>
-                    </div>
-                    <div class="data">
-                        <div class="label low_emphasis">Independent</div>
-                        <div id="independent" class="value">-</div>
-                    </div>
-                </div>
-                <div class="data">
-                    <div class="label">Assessment %</div>
-                </div>
-                <div class="data-squash">
-                    <div class="data">
-                        <div class="label low_emphasis">Written</div>
-                        <div id="writtenExam" class="value">-</div>
-                    </div>
-                    <div class="data">
-                        <div class="label low_emphasis">Practical</div>
-                        <div id="pracExam" class="value">-</div>
-                    </div>
-                    <div class="data">
-                        <div class="label low_emphasis">Coursework</div>
-                        <div id="cw" class="value">-</div>
-                    </div>
+<div name="search_area">
+    <input id="search" placeholder="Search" value="CS1001">
+</div>
 
+    <div id="items">
+        <div id="item" class="module_viewer">
+            <div class="header">
+                <div class="lhs" >
+                    <div name="code" class="code">--</div>
+                </div>
+                <div class="rhs">
+                    <h1 name="title" class="title">--</h1>
                 </div>
             </div>
-            <div class="rhs">
-                <p id="description" class="description">
-
-                </p>
-                <div class="lecturers">
+            <div>
+                <div class="lhs">
                     <div class="data">
-                        <div class="label low_emphasis">Co-Ordinator</div>
-                        <div id="coord" class="value">-</div>
+                        <div class="label low_emphasis">Credits Available</div>
+                        <div name="credits" class="value">--</div>
                     </div>
                     <div class="data">
-                        <div class="label low_emphasis">Lecturers</div>
-                        <div id="lecturers" class="value">-</div>
+                        <div class="label low_emphasis">Year</div>
+                        <div name="year" class="value">--</div>
+                    </div>
+                    <div class="data">
+                        <div class="label low_emphasis">Semester</div>
+                        <div name="semester" class="value">1</div>
+                    </div>
+                    <div class="data">
+                        <div class="label">Contact Hours</div>
+                    </div>
+                    <div class="data-squash">
+                        <div class="data">
+                            <div class="label low_emphasis">Scheduled</div>
+                            <div name="scheduled" class="value">-</div>
+                        </div>
+                        <div class="data">
+                            <div class="label low_emphasis">Independent</div>
+                            <div name="independent" class="value">-</div>
+                        </div>
+                    </div>
+                    <div class="data">
+                        <div class="label">Assessment %</div>
+                    </div>
+                    <div class="data-squash">
+                        <div class="data">
+                            <div class="label low_emphasis">Written</div>
+                            <div name="writtenExam" class="value">-</div>
+                        </div>
+                        <div class="data">
+                            <div class="label low_emphasis">Practical</div>
+                            <div name="pracExam" class="value">-</div>
+                        </div>
+                        <div class="data">
+                            <div class="label low_emphasis">Coursework</div>
+                            <div name="cw" class="value">-</div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="rhs">
+                    <p name="description" class="description">
+
+                    </p>
+                    <div class="lecturers">
+                        <div class="data">
+                            <div class="label low_emphasis">Co-Ordinator</div>
+                            <div name="coord" class="value">-</div>
+                        </div>
+                        <div class="data">
+                            <div class="label low_emphasis">Lecturers</div>
+                            <div name="lecturers" class="value">-</div>
+                        </div>
                     </div>
                 </div>
             </div>
