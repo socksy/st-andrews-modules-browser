@@ -76,6 +76,12 @@ var search = function(data, needle) {
                 reg.test(data[e].code) ||
                 reg.test(data[e].coord);
 
+        if ('lecturers' in data[e]) {
+            result |= data[e].lecturers.reduce(function(prev, l) {
+                return prev || reg.test(l);
+            }, false);
+        }
+
         if (result) {
             results.push(data[e]);
         }
