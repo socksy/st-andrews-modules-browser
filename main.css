@@ -16,7 +16,7 @@
     font-size: 20px;
     margin-top: 15px;
     outline: none;
-    text-underline-mode: solid; }
+    text-transform: uppercase; }
   .module_viewer .lhs {
     display: inline-block;
     width: 150px;
@@ -48,5 +48,3 @@
       font-size: 20px; }
   .module_viewer .low_emphasis {
     color: #979797; }
-
-/*# sourceMappingURL=main.css.map */
