@@ -11,7 +11,7 @@ var findModule = function(partial) {
 };
 
 document.getElementById('code').oninput = function () {
-    var guess = document.getElementById('code').value;
+    var guess = document.getElementById('code').value.toUpperCase();
     if(guess in data) {
         fill(data[guess]);
     }
