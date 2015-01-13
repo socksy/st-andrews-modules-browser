@@ -8,8 +8,13 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-color: green;
-  color: yellow; }
+  color: yellow;
+  text-transform: lowercase;
+  animation: pop 0.2s steps(5, start) infinite; }
 
+@keyframes pop {
+  to {
+    visibility: hidden; } }
 .stat_area {
   width: 100%;
   margin: 0% 2% 0% 2%;
