@@ -1,4 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Neuton:200);
 body {
   width: 800px;
   left: 50%;
@@ -7,7 +6,9 @@ body {
   padding: 0px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background-color: green;
+  color: yellow; }
 
 .stat_area {
   width: 100%;
@@ -16,7 +17,7 @@ body {
   .stat_area div {
     display: inline-block; }
   .stat_area div:nth-child(even) {
-    color: #c0c0c0; }
+    color: red; }
 
 #search {
   width: 100%;
@@ -26,7 +27,7 @@ body {
 
 .module_viewer {
   cursor: default;
-  font-family: "Neuton", sans-serif;
+  font-family: "Comic Sans MS", "Comic Sans", sans-serif;
   display: inline-block;
   width: 100%; }
   .module_viewer .header {
@@ -73,6 +74,4 @@ body {
     .module_viewer .rhs .description {
       font-size: 20px; }
   .module_viewer .low_emphasis {
-    color: #979797; }
-
-/*# sourceMappingURL=main.css.map */
+    color: purple; }
