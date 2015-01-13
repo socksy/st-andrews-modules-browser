@@ -10,9 +10,13 @@ body {
   background-color: green;
   color: yellow;
   text-transform: lowercase;
-  animation: pop 0.2s steps(5, start) infinite; }
+  animation: pop 0.2s steps(5, start) infinite;
+  -webkit-animation: pop 0.2s steps(5, start) infinite; }
 
 @keyframes pop {
+  to {
+    visibility: hidden; } }
+@-webkit-keyframes pop {
   to {
     visibility: hidden; } }
 .stat_area {
