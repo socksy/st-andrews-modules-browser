@@ -24,16 +24,24 @@ document.getElementById('search').oninput = function () {
         var f = function() {
 
             var results = search(data, guess);
-            addNodes(results.length);
-            results.forEach(fill);
+            addNodes(Object.keys(results).length);
+            Object.keys(results).forEach(function(k, i) {
+                fill(results[k], i);
+            });
+            showStats(results);
         };
 
         timeout = setTimeout(f, 300);
+
+    } else if (guess.trim() === '') {
+        showStats(data);
     }
 
 };
 
 var fill = function(obj, i) {
+
+    if (i > 29) return;
 
     Object.keys(obj).forEach(function(key) {
 
@@ -47,6 +55,10 @@ var fill = function(obj, i) {
 
 var addNodes = function(i) {
 
+    console.time("Adding Nodes")
+
+    i = i > 30 ? 30 : i;
+
     document.getElementById('items').innerHTML = '';
 
     if (i == 0) {
@@ -59,16 +71,21 @@ var addNodes = function(i) {
         document.getElementById('items').appendChild(newNode.cloneNode(true));
 
     }
+
+    console.timeEnd("Adding Nodes")
+
 };
 
 var search = function(data, needle) {
 
-    results = [];
+    console.time("Searching")
+
+    results = {};
+
     var reg = new RegExp(needle, 'i');
 
     Object.keys(data).forEach(function(e) {
 
-        if (results.length == 10) return;
 
         data[e].code = e;
 
@@ -83,10 +100,61 @@ var search = function(data, needle) {
         }
 
         if (result) {
-            results.push(data[e]);
+            results[e] = data[e];
         }
 
     });
 
+    console.timeEnd("Searching")
+
     return results;
 };
+
+var stats = function(data) {
+
+    var statsObj = {};
+
+    statsObj.n = Object.keys(data).length;
+
+    var subjectCounts = {};
+
+    Object.keys(data).forEach(function(e) {
+        var s = e.substring(0,2);
+        if (!(s in subjectCounts)) subjectCounts[s] = 0;
+        subjectCounts[s]++;
+    });
+
+    console.log(subjectCounts)
+
+    var zip = Object.keys(subjectCounts).reduce(function(prev, cur){
+        return prev.concat(new Array([cur, subjectCounts[cur]]));
+    }, new Array());
+
+    zip = zip.sort(function (a, b) {
+        if (a[1] < b[1]) {
+            return 1;
+        }
+        if (a[1] > b[1]) {
+            return -1;
+        }
+        // a must be equal to b
+        return 0;
+    });
+
+    statsObj.top = zip[0][0];
+
+    statsObj.topn = zip[0][1];
+
+    statsObj.nSub = Object.keys(subjectCounts).length;
+
+    return statsObj;
+};
+
+var showStats = function(data) {
+    var st = stats(data);
+    Object.keys(st).forEach(function(e) {
+       document.getElementById(e).innerHTML = st[e];
+    });
+};
+
+showStats(data);

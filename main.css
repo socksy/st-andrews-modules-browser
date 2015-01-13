@@ -9,9 +9,18 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+.stat_area {
+  width: 100%;
+  margin: 0% 2% 0% 2%;
+  padding: 2%; }
+  .stat_area div {
+    display: inline-block; }
+  .stat_area div:nth-child(even) {
+    color: #c0c0c0; }
+
 #search {
   width: 100%;
-  margin: 20px;
+  margin: 0px 20px 20px 20px;
   font-size: 20px;
   line-height: 28px; }
 
@@ -36,7 +45,7 @@ body {
     text-transform: uppercase; }
   .module_viewer .lhs {
     display: inline-block;
-    width: 16%;
+    width: 21%;
     padding: 2%;
     vertical-align: top; }
   .module_viewer .data {
@@ -60,7 +69,7 @@ body {
   .module_viewer .rhs {
     padding: 2%;
     display: inline-block;
-    width: 70%; }
+    width: 65%; }
     .module_viewer .rhs .description {
       font-size: 20px; }
   .module_viewer .low_emphasis {
