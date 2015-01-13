@@ -55,8 +55,6 @@ var fill = function(obj, i) {
 
 var addNodes = function(i) {
 
-    console.time("Adding Nodes")
-
     i = i > 30 ? 30 : i;
 
     document.getElementById('items').innerHTML = '';
@@ -72,13 +70,9 @@ var addNodes = function(i) {
 
     }
 
-    console.timeEnd("Adding Nodes")
-
 };
 
 var search = function(data, needle) {
-
-    console.time("Searching")
 
     results = {};
 
@@ -105,8 +99,6 @@ var search = function(data, needle) {
 
     });
 
-    console.timeEnd("Searching")
-
     return results;
 };
 
@@ -124,8 +116,6 @@ var stats = function(data) {
         subjectCounts[s]++;
     });
 
-    console.log(subjectCounts)
-
     var zip = Object.keys(subjectCounts).reduce(function(prev, cur){
         return prev.concat(new Array([cur, subjectCounts[cur]]));
     }, new Array());
@@ -137,7 +127,7 @@ var stats = function(data) {
         if (a[1] > b[1]) {
             return -1;
         }
-        // a must be equal to b
+
         return 0;
     });
 
